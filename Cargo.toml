@@ -1,0 +1,48 @@
+[package]
+name = "tkm"
+version = "0.1.0"
+edition = "2021"
+description = "Unified developer token manager — one master password to rule them all"
+
+[dependencies]
+# CLI
+clap = { version = "4", features = ["derive"] }
+
+# TUI
+ratatui = "0.29"
+crossterm = "0.28"
+
+# Crypto
+aes-gcm = "0.10"
+argon2 = "0.5"
+rand = "0.8"
+
+# Secure memory
+secrecy = { version = "0.10", features = ["serde"] }
+zeroize = { version = "1", features = ["derive"] }
+
+# Keychain
+keyring = "3"
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+
+# Clipboard
+arboard = "3"
+
+# Time
+chrono = { version = "0.4", features = ["serde"] }
+
+# Error handling
+thiserror = "2"
+anyhow = "1"
+
+# Password input
+rpassword = "7"
+dirs = "6.0.0"
+
+[dev-dependencies]
+dirs = "6.0.0"
+tempfile = "3.27.0"
